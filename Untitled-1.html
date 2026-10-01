@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariachi [Nombre de tu Mariachi] | Música y Tradición</title>
+    <!-- Fuente elegante de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos Generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #fcfcfc;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        /* Encabezado y Navegación */
+        header {
+            background-color: #1a1a1a;
+            color: #d4af37; /* Color dorado */
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #d4af37;
+            text-decoration: none;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #d4af37;
+        }
+
+        /* Sección Principal (Hero) */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://thumbs.dreamstime.com/b/el-mariachi-de-maxican-congriega-21734024.jpg') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 1rem;
+            margin-top: 60px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            color: #d4af37;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+        .btn {
+            background-color: #8b0000; /* Rojo elegante */
+            color: #fff;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background 0.3s, transform 0.2s;
+            display: inline-block;
+        }
+        .btn:hover {
+            background-color: #a00000;
+            transform: scale(1.05);
+        }
+
+        /* Secciones */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1100px;
+            margin: auto;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: #1a1a1a;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background-color: #d4af37;
+            display: block;
+            margin: 0.5rem auto 0;
+        }
+
+        /* Servicios */
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .servicio-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            border-top: 4px solid #d4af37;
+        }
+        .servicio-card h3 {
+            margin-bottom: 1rem;
+            color: #8b0000;
+        }
+
+        /* Botón Flotante de WhatsApp */
+        .btn-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-whatsapp:hover {
+            background-color: #1ebd56;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        footer p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+            nav ul {
+                margin-top: 1rem;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado / Menú -->
+    <header>
+        <a href="#" class="logo">🎺 Mariachi Fina Estampa de México</a>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección Principal -->
+    <section id="inicio" class="hero">
+        <h1>La Mejor Música Mexicana</h1>
+        <p>Alegria, tradición y la mejor calidad musical para hacer de tu evento un momento inolvidable.</p>
+        <a href="#contacto" class="btn">¡Contrata Ahora!</a>
+    </section>
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="nosotros">
+        <h2 class="section-title">Sobre Nosotros</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+            Somos un grupo de mariachi profesional con más de 5 años de experiencia amenizando todo tipo de eventos sociales y privados. Nos distinguimos por la puntualidad, elegancia en la vestimenta y un amplio repertorio de música tradicional y moderna.
+        </p>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section id="servicios">
+        <h2 class="section-title">Nuestros Servicios</h2>
+        <div class="servicios-grid">
+            <div class="servicio-card">
+                <h3>Bodas y XV Años</h3>
+                <p>Acompañamos tu ceremonia o recepción con las melodías más románticas y festivas.</p>
+            </div>
+            <div class="servicio-card">
+                <h3>Cumpleaños y Serenatas</h3>
+                <p>Sorprende a esa persona especial con una serenata inolvidable llena de emoción.</p>
+            </div>
+            <div class="servicio-card">
+                <h3>Eventos Empresariales</h3>
+                <p>La mejor ambientación y elegancia para eventos corporativos y fin de año.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" style="text-align: center;">
+        <h2 class="section-title">Contacto y Reservaciones</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 1rem;">¿Listo para armar la fiesta?</p>
+        <p style="font-size: 1.2rem; margin-bottom: 1rem;">Los mejores precios entre semana</p>
+        <p><strong>Teléfono / WhatsApp:</strong> +52 7771413331</p>
+        <p><strong>Correo electrónico:</strong> mariachiestampafina@gmail.com</p>
+        <p><strong>Ubicación:</strong> Jiutepec, Cuernavaca, Temixco, Tepoztlán, Emiliano Zapata, Yautepec, Xochitepec y alrededores.</p>
+        <br>
+        <a href="https://wa.me/7771413331?text=Hola,%20me%20interesa%20contratar%20su%20mariachi" target="_blank" class="btn" style="background-color: #25d366;">Escribir por WhatsApp</a>
+    </section>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/7771413331?text=Hola,%20busco%20información%20sobre%20sus%20servicios" class="btn-whatsapp" target="_blank">
+        📲 Contratar por WhatsApp
+    </a>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 Mariachi Fina estampa de México. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
